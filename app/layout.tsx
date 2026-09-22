@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Nav from "./components/Nav";
+import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Chase Wagner | IT & Network Engineering",
@@ -17,7 +19,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className="bg-gradient">
+        <Nav />
+        {children}
+        <footer className="border-t border-[var(--border)]">
+          <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-8 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
+            <span>© 2026 Chase Wagner</span>
+            <a href="mailto:YOUR_EMAIL@example.com" className="flex items-center gap-2 hover:text-[var(--ink)]"><Mail size={15}/> Contact</a>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
