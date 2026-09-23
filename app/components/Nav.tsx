@@ -9,7 +9,8 @@ const links = [
   ["/about", "About"],
   ["/projects", "Projects"],
   ["/homelab", "Homelab"],
-  ["/resume", "Resume"]
+  ["/resume", "Resume"],
+  ["/contact", "Contact"]
 ];
 
 export default function Nav() {
